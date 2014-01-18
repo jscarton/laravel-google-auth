@@ -28,6 +28,11 @@ class GoogleAuthGuard extends Guard {
     {
         return $this->provider->getAuthUrl();
     }
+    
+    public function getSessionToken()
+    {
+        return Session::get($this->provider->getTokenName());
+    }
 
     /**
      * If this request is the redirect from a successful authorization grant, store the access token in the session
