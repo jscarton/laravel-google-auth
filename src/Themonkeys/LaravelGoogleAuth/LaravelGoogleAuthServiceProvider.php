@@ -41,13 +41,12 @@ class LaravelGoogleAuthServiceProvider extends AuthServiceProvider {
         $app['google-client'] = $app->share(function($app)
         {
             $client = new \Google_Client();
-            $client->setApplicationName($app['config']->get('laravel-google-auth::clientId'));
             $client->setClientId($app['config']->get('laravel-google-auth::clientId'));
             $client->setClientSecret($app['config']->get('laravel-google-auth::clientSecret'));
             $client->setRedirectUri($app['config']->get('laravel-google-auth::redirectUri'));
-            $client->setDeveloperKey($app['config']->get('laravel-google-auth::developerKey'));
             $client->setScopes($app['config']->get('laravel-google-auth::scopes'));
             $client->setAccessType($app['config']->get('laravel-google-auth::access_type'));
+            $client->setApprovalPrompt($app['config']->get('laravel-google-auth::approval_prompt'));
 
             return $client;
         });
