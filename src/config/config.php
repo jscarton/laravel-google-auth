@@ -31,23 +31,6 @@ return array(
     |
     */
     'redirectUri' => URL::to('/') . '/', // URL:to('/') doesn't include the trailing slash
-
-    /*
-    |--------------------------------------------------------------------------
-    | Google Developer Key
-    |--------------------------------------------------------------------------
-    */
-    'developerKey' => null,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Application Name
-    |--------------------------------------------------------------------------
-    |
-    | The Application Name to register with the Google API.
-    |
-    */
-    'applicationName' => null,
     
     /*
     |--------------------------------------------------------------------------
@@ -81,5 +64,7 @@ return array(
     |
     */
     'access_type' => 'offline',
+
+    'approval_prompt' => 'auto',
 
 );

@@ -20,13 +20,18 @@ class GoogleAuthGuard extends Guard {
     public function logout()
     {
         Session::forget($this->provider->getTokenName());
-        App::make('google-client')->revokeToken();
+        //App::make('google-client')->revokeToken();
         parent::logout();
     }
 
     public function getAuthUrl()
     {
         return $this->provider->getAuthUrl();
+    }
+    
+    public function getSessionToken()
+    {
+        return Session::get($this->provider->getTokenName());
     }
 
     /**
