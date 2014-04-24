@@ -51,7 +51,7 @@ Installation
 ```
 
 ```bash
-composer require themonkeys/laravel-google-auth:dev-master --no-update
+composer require google/google-api-php-client --no-update
 composer require jscarton/laravel-google-auth --no-update
 composer update
 ```
@@ -180,12 +180,6 @@ for example `Auth::user()->name`:
         </tr>
     </table>
 ```
-
-Contribute
-----------
-
-In lieu of a formal styleguide, take care to maintain the existing coding style.
-
 License
 -------
 
