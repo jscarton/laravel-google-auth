@@ -1,4 +1,3 @@
-
 This is a fork of
 
 ![The Monkeys](http://www.themonkeys.com.au/img/monkey_logo.png)
@@ -6,13 +5,13 @@ This is a fork of
 Laravel Google Authentication Driver
 ====================================
 
-![JSCARTON] This driver Allows you to use Google to authenticate users of your Laravel application. I've started this fork because I want to adapt the code for a new oauth driver for special purpose
+This driver Allows you to use Google to authenticate users of your Laravel application.
+
+[JScarton] I've started this fork because I want to adapt the code for a new oauth driver for special purpose
 
 
 Installation
 ------------
-To get the latest version of cachebuster simply require it in your composer.json file.
-
 > **Note**: This package depends on a non-packagist package, google-api-php-client, so you will need to manually add
   the following repository definition to your project's `composer.json` file before attempting to run `composer update`
   or `composer install`:
@@ -33,14 +32,28 @@ To get the latest version of cachebuster simply require it in your composer.json
           "classmap": ["src/"]
         }
       }
+		},
+		{
+      "type": "package",
+      "package": {
+        "name": "jscarton/laravel-google-auth",
+        "version": "0.1.0",
+        "dist": {
+          "url": "https://github.com/jscarton/laravel-google-auth/archive/master.zip",
+          "type": "zip"
+        },
+        "autoload": {
+          "classmap": ["src/"]
+        }
+      }
 		}
 	],
 ```
 
 ```bash
 composer require themonkeys/laravel-google-auth:dev-master --no-update
-composer require jscarton/laravel-google-auth:dev-master --no-update
-composer update themonkeys/laravel-google-auth
+composer require jscarton/laravel-google-auth --no-update
+composer update
 ```
 
 Once the package is installed you need to register the service provider with the application. Open up
