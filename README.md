@@ -1,9 +1,12 @@
+
+This is a fork of
+
 ![The Monkeys](http://www.themonkeys.com.au/img/monkey_logo.png)
 
 Laravel Google Authentication Driver
 ====================================
 
-Allows you to use Google to authenticate users of your Laravel application.
+![JSCARTON] This driver Allows you to use Google to authenticate users of your Laravel application. I've started this fork because I want to adapt the code for a new oauth driver for special purpose
 
 
 Installation
@@ -36,6 +39,7 @@ To get the latest version of cachebuster simply require it in your composer.json
 
 ```bash
 composer require themonkeys/laravel-google-auth:dev-master --no-update
+composer require jscarton/laravel-google-auth:dev-master --no-update
 composer update themonkeys/laravel-google-auth
 ```
 
@@ -54,15 +58,15 @@ and replace it with:
 
 ```php
 'providers' => array(
-    'Themonkeys\LaravelGoogleAuth\LaravelGoogleAuthServiceProvider',
+    'Jscarton\LaravelGoogleAuth\LaravelGoogleAuthServiceProvider',
 )
 ```
 
 To configure the package, you can use the following command to copy the configuration file to
-`app/config/packages/themonkeys/laravel-google-auth`.
+`app/config/packages/jscarton/laravel-google-auth`.
 
 ```sh
-php artisan config:publish themonkeys/laravel-google-auth
+php artisan config:publish jscarton/laravel-google-auth
 ```
 
 Or you can just create a new file in that folder and only override the settings you need.
@@ -70,7 +74,7 @@ Or you can just create a new file in that folder and only override the settings 
 The settings themselves are documented inside `config.php`.
 
 To make your configuration apply only to a particular environment, put your configuration in an environment folder such
-as `app/config/packages/themonkeys/laravel-google-auth/environment-name/config.php`.
+as `app/config/packages/jscarton/laravel-google-auth/environment-name/config.php`.
 
 Usage
 -----
@@ -173,4 +177,4 @@ License
 -------
 
 MIT License
-(c) [The Monkeys](http://www.themonkeys.com.au/)
+(c) [Jscarton]
