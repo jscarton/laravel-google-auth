@@ -1,6 +1,6 @@
 <?php
 
-namespace Themonkeys\LaravelGoogleAuth;
+namespace JScarton\LaravelGoogleAuth;
 
 
 use Illuminate\Auth\Guard;

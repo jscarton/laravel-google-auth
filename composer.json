@@ -1,11 +1,11 @@
 {
-    "name": "themonkeys/laravel-google-auth",
-    "description": "Laravel Authentication Driver for Google OAuth authentication",
+    "name": "jscarton/laravel-google-auth",
+    "description": "JScarton's Laravel Authentication Driver for Google OAuth authentication",
     "keywords": ["laravel", "auth", "authentication", "oauth2", "google", "login"],
     "authors": [
         {
-            "name": "The Monkeys",
-            "email": "developers@themonkeys.com.au"
+            "name": "JScarton",
+            "email": "jscarton@gmail.com"
         }
     ],
     "license": "MIT",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Themonkeys\\LaravelGoogleAuth": "src/"
+            "JScarton\\LaravelGoogleAuth": "src/"
         }
     },
     "minimum-stability": "dev"

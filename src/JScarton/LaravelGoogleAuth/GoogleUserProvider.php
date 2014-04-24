@@ -1,4 +1,4 @@
-<?php namespace Themonkeys\LaravelGoogleAuth;
+<?php namespace JScarton\LaravelGoogleAuth;
 
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\UserProviderInterface;
@@ -94,6 +94,21 @@ class GoogleUserProvider implements UserProviderInterface {
 
             return Redirect::to(filter_var($url, FILTER_SANITIZE_URL));
         }
+        return null;
+    }
+
+    /**
+    * Dummy method for compatibility with Laravel 4.1.x
+    */
+    public function retrieveByToken($identifier, $token)
+    {
+        return null;
+    }
+    /**
+    * Dummy method for compatibility with Laravel 4.1.x
+    */
+    public function updateRememberToken(UserInterface $user, $token)
+    {
         return null;
     }
 
