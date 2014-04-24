@@ -71,7 +71,7 @@ and replace it with:
 
 ```php
 'providers' => array(
-    'Jscarton\LaravelGoogleAuth\LaravelGoogleAuthServiceProvider',
+    'JScarton\LaravelGoogleAuth\LaravelGoogleAuthServiceProvider',
 )
 ```
 
@@ -190,4 +190,4 @@ License
 -------
 
 MIT License
-(c) [Jscarton]
+(c) [JScarton]
