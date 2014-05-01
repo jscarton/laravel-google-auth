@@ -43,10 +43,23 @@ class GoogleUserProvider implements UserProviderInterface {
      */
     public function retrieveByCredentials(array $credentials)
     {
-        if ($this->client->getAccessToken()) {
+        try{
+            if ($this->client->getAccessToken()) {
 
-            $userinfo = $this->oauth2->userinfo->get();
-            return new GenericUser($userinfo);
+                $userinfo = $this->oauth2->userinfo->get();
+                return new GenericUser($userinfo);
+            }
+        }
+        catch (Google_ServiceException $e)
+        {
+        // managing invalid credentials exception 401
+            if ($e->getCode()=="401")
+            {
+            //destroy users session
+                Auth::logout();
+            //redirects to login facility
+                Redirect::to('/login')
+            }
         }
     }
 
