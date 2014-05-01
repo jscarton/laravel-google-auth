@@ -58,7 +58,7 @@ class GoogleUserProvider implements UserProviderInterface {
             //destroy users session
                 Auth::logout();
             //redirects to login facility
-                Redirect::to('/login')
+                Redirect::to('/login');
             }
         }
     }
